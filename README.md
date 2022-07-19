@@ -1,2 +1,2 @@
 # algorithm_java
-java study
+study steady
