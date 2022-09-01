@@ -5,10 +5,12 @@ import java.util.HashMap;
 class Node {
     String data;
     Node next;
+    Node last;
 
     public Node(String data) {
         this.data = data;
         this.next = null;
+        this.last = null;
     }
 }
 
@@ -28,6 +30,7 @@ public class Problem5 {
 
         for (int i = 0; i < N; i++) {
             mailBox[i] = new Node("root");
+            mailBox[i].last = mailBox[i];
         }
     }
 
@@ -60,18 +63,16 @@ public class Problem5 {
 
     private void addMail(int rID, String code) {
         Node temp = mailBox[rID];
-        while (true) {
-            if (temp.next == null) {
-                temp.next = new Node(code);
-                return;
-            }
-            temp = temp.next;
-        }
+        temp.last.next = new Node(code);
+        temp.last = temp.last.next;
     }
 
     private void tailCut(int rID) {
         Node temp = mailBox[rID];
         temp.next = temp.next.next;
+        if (temp.next == null) {
+            temp.last = temp;
+        }
     }
 
     int getCount(int uID) {
@@ -91,6 +92,7 @@ public class Problem5 {
             }
             temp = temp.next;
         }
+        mailBox[uID].last = temp;
         mailCount[uID] -= count;
         return count;
     }

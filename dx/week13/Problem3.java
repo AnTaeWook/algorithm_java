@@ -47,11 +47,11 @@ public class Problem3 {
         if (dp[now][leftJumpCount] > 0) {
             return dp[now][leftJumpCount];
         }
+        if (leftJumpCount == dp.length - now - 2) {
+            return dp[now][leftJumpCount] = poses[now].getDist(poses[poses.length - 1]);
+        }
         dp[now][leftJumpCount] = Integer.MAX_VALUE;
-        for (int i = 0; i < dp.length - now - 1; i++) {
-            if (i > leftJumpCount) {
-                continue;
-            }
+        for (int i = 0; i < dp.length - now - 1 && i <= leftJumpCount; i++) {
             int next = now + i + 1;
             dp[now][leftJumpCount] = Math.min(dp[now][leftJumpCount], dfs(dp, poses, next, leftJumpCount - i) + poses[now].getDist(poses[next]));
         }
