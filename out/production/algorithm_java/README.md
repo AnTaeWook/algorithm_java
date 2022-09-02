@@ -1,2 +1,14 @@
 # algorithm_java
-## study steady
+
+---
+
+### import memo
+- System.out.println - no library need
+- HashMap - java.util.HashMap
+- HashSet - java.util.HashSet
+- ArraysMethod - java.util.Arrays
+- MapMethod - java.util.Map
+- Stack - java.util.Stack
+- Queue - java.util.Queue(ArrayDeque ... )
+---
+
