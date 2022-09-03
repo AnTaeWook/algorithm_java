@@ -10,5 +10,7 @@
 - MapMethod - java.util.Map
 - Stack - java.util.Stack
 - Queue - java.util.Queue(ArrayDeque ... )
+- Collections - java.util.Collections(Sort, max, min ... )
+- CompareTo or Comparable - java.util.Comparator
 ---
 
