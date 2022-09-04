@@ -20,5 +20,8 @@ public class StringControl {
         System.out.println(s.replaceAll("[^0-9]", "x"));
         System.out.println(s.replaceAll("[*(]", "x"));
         System.out.println(s.replaceAll("[a-z]", "x"));
+
+        // 문자열 길이 맞추기
+        System.out.println(String.format("%10s", "hello"));
     }
 }
