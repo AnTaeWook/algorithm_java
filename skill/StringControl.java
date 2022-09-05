@@ -23,5 +23,10 @@ public class StringControl {
 
         // 문자열 길이 맞추기
         System.out.println(String.format("%10s", "hello"));
+
+        // 문자 정렬 후 뒤집기 (StringBuilder에서)
+        s = "abcde";
+        StringBuilder stringBuilder2 = new StringBuilder(s);
+        System.out.println(stringBuilder2.reverse());
     }
 }
