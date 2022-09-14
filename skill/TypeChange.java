@@ -23,5 +23,8 @@ public class TypeChange {
 
         // decimal 에서 binary
         System.out.println(Integer.toBinaryString(25));
+        
+        // decimal 에서 n 진수 표현
+        System.out.println(Integer.toString(10, 3));
     }
 }
