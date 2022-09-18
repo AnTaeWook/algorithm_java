@@ -26,5 +26,9 @@ public class TypeChange {
         
         // decimal 에서 n 진수 표현
         System.out.println(Integer.toString(10, 3));
+
+        // 정수 자리수 구하기
+        int num = 12345;
+        System.out.println((int)Math.log10(num) + 1);
     }
 }

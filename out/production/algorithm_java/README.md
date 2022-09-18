@@ -13,5 +13,6 @@
 - Collections - java.util.Collections(Sort, max, min ... )
 - CompareTo or Comparable - java.util.Comparator
 - BigInteger - java.math.BigInteger
+- Collectors - java.util.Collection
 ---
 

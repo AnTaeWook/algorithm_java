@@ -15,6 +15,10 @@ public class IntegerArray {
         // Integer[] 를 Collection 으로 변환
         ArrayDeque<Integer> deque = new ArrayDeque<>(Arrays.asList(arr));
 
+        // String[]을 int[]로 변환
+        String[] strArr = {"123", "12", "5"};
+        int[] numArr = Arrays.stream(strArr).mapToInt(Integer::parseInt).toArray();
+
         // Collection 자료구조의 내부 합 구하기
         int sum = deque.stream().reduce(0, Integer::sum);
         System.out.println(sum);

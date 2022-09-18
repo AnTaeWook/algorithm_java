@@ -1,16 +1,14 @@
 package dx;
 
 import java.util.*;
+import java.util.stream.*;
 
 public class Test {
 
     public static void main(String[] args) {
-        Stack<String> strings = new Stack<>();
-        strings.add("asd");
-        strings.add("asd");
-        strings.add("asd");
-        strings.add("asd");
-        strings.add("asd");
+        String[] arr = {"asd", "AS"};
+        Set<String> collect = Arrays.stream(arr).collect(Collectors.toSet());
+        System.out.println(collect.getClass());
     }
 
 }
